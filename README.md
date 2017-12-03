@@ -1,5 +1,7 @@
 # bind-callbacks
 
+[![Maintainability](https://api.codeclimate.com/v1/badges/2245618c05ace03257d9/maintainability)](https://codeclimate.com/github/pauloddr/bind-callbacks/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/2245618c05ace03257d9/test_coverage)](https://codeclimate.com/github/pauloddr/bind-callbacks/test_coverage)
+
 Bind instance methods of a class to its own object and use them around without having to resort to `.bind(this)`.
 
 ## Disclaimer
