@@ -4,11 +4,11 @@ Bind instance methods of a class to its own object and use them around without h
 
 ## Disclaimer
 
-This may be considered an [over-optimization technique](https://en.wikipedia.org/wiki/Program_optimization#When_to_optimize), and can be considered an anti-pattern. Use at your own risk.
+This may be considered an [over-optimization technique](https://en.wikipedia.org/wiki/Program_optimization#When_to_optimize), and thus an anti-pattern. Use at your own risk.
 
 ## Usage
 
-Consider the following class:
+Consider the following ES6 class:
 
 ```javascript
 class Thing {
@@ -32,7 +32,7 @@ If you don't use `.bind(thing)` in the code above, the value of `this` will be l
 
 However, `bind()` returns a __new function__, [as stated in its documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind). This causes memory allocation, giving more work to the garbage collector later on, and increasing the chance of memory leaks.
 
-This component provides a function that will create a `callbacks` object inside your instance and then store those bound functions for your code to call later.
+This component provides a function that will create a `callbacks` property inside the object instance and then store those bound functions for your code to call later:
 
 ```javascript
 const bindCallbacks = require('bind-callbacks')
