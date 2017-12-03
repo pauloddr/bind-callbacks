@@ -1,0 +1,41 @@
+{
+  "name": "bind-callbacks",
+  "version": "0.1.0",
+  "description": "Bind instance methods of a class to its own object and use them around without having to resort to `.bind(this)`.",
+  "main": "index.js",
+  "scripts": {
+    "test": "standard --fix && nyc mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pauloddr/bind-callbacks.git"
+  },
+  "author": "@pauloddr",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pauloddr/bind-callbacks/issues"
+  },
+  "homepage": "https://github.com/pauloddr/bind-callbacks#readme",
+  "devDependencies": {
+    "chai": "4.1.2",
+    "mocha": "4.0.1",
+    "nyc": "11.3.0",
+    "standard": "*"
+  },
+  "standard": {
+    "env": "mocha",
+    "ignore": [
+      "node_modules/**"
+    ]
+  },
+  "nyc": {
+    "include": [
+      "index.js"
+    ],
+    "reporter": [
+      "lcov",
+      "text-summary",
+      "html"
+    ]
+  }
+}
