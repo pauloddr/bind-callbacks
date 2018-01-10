@@ -18,7 +18,7 @@ class Thing {
     this.value = value
   }
   increment () {
-    this.value = this.value + 1
+    this.value++
   }
 }
 ```
@@ -45,7 +45,7 @@ class Thing {
     bindCallbacks(this, 'increment') // <-- assign bound callbacks
   }
   increment () {
-    this.value = this.value++
+    this.value++
   }
 }
 ```
