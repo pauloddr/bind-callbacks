@@ -3,7 +3,9 @@ function bindCallbacks () {
   if (!instance) {
     throw new TypeError('bindCallbacks: instance not provided')
   }
-  instance.callbacks = {}
+  if (!instance.callbacks) {
+    instance.callbacks = {}
+  }
   var i = 1
   var l = arguments.length
   var functionName
